@@ -1,0 +1,268 @@
+/* ========== start navbar ==========*/
+.navbar-brand img{
+    width: 100px;
+}
+nav .nav-link.active{
+    color: #f25454 !important;
+}
+nav .nav-link:hover{
+    color: #f25454 !important;
+}
+/* ========== end navbar ==========*/
+
+/* ========== start header ==========*/
+header .carousel-inner .carousel-item:first-child{
+    background-image: url("../image/slideshow-1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+header .carousel-inner .carousel-item:nth-child(2){
+    background-image: url("../image/slideshow-2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+header .carousel-inner .carousel-item:last-child{
+    background-image: url("../image/slideshow-3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+header .carousel-control-prev{
+    width: auto;
+    top: unset;
+    bottom: 50%;
+    border: 2px solid white;
+    padding: 7px 13px;
+    z-index: 1;
+    opacity: unset;
+}
+header .carousel-control-next{
+    right: unset;
+    width: auto;
+    left: 0;
+    top: 50%;
+    bottom: unset;
+    border: 2px solid white;
+    padding: 7px 13px;
+    z-index: 1;
+    opacity: unset;
+}
+header .carousel-control-next::after,
+header .carousel-control-prev::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    z-index: -1;
+    transition: .3s 0s all linear;
+
+}
+header .carousel-control-next:hover::after,
+header .carousel-control-prev:hover::after{
+    width: 100%;
+}
+header .carousel-inner .carousel-item .box{
+    transform: translateX(100%);
+    transition: .5s .3s all linear;
+}
+header .carousel-inner .carousel-item.active .box{
+    transform: translateX(0%);
+}
+header > a{
+    width: 30px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 15px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header > a > span{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    animation: uptodown 1s linear 0s infinite normal;
+}
+@keyframes uptodown {
+    0%{
+        transform: translateY(-15px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(15px);
+        opacity: 0;  
+    }
+    
+}
+/* ========== end header ==========*/
+
+/* ========== start about ==========*/
+.text-box h2{
+    z-index: 1;
+    position: relative;
+}
+.text-box h2::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    content: attr(text-att);
+    font-size: 80px;
+    line-height: 100px;
+    font-weight: 500;
+    opacity: .2;
+    
+}
+.text-box h2::before{
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+    background-color: black;
+    transition: .3s 0s all linear;
+}
+.text-box:hover h2::before{
+    width: 100px;
+    
+}
+.about .box-bar div:nth-child(even){
+    width: 100%;
+    height: 5px;
+    background-color: #E9ECEF;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+.about .box-bar div:nth-child(even) span{
+    height: 100%;
+    background-color: #f25454;
+    display: block;
+    position: relative;
+}
+.about .box-bar div:nth-child(2) span{
+    width: 80%;
+}
+.about .box-bar div:nth-child(4) span{
+    width: 95%;
+}
+.about .box-bar div:nth-child(6) span{
+    width: 85%;
+}
+.about .box-bar div:nth-child(8) span{
+    width: 70%;
+}
+.about .box-bar div > span::after{
+    content: attr(text-bar);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    font-size: 15px;
+    line-height: 20px;
+    color: #6c757d;
+}
+
+/* ========== end about ==========*/
+
+/* ========== start team ==========*/
+.team .image{
+    overflow: hidden;
+}
+.team .image img{
+    transition: .3s 0s all linear;
+}
+.team .box:hover img{
+    transform: scale(1.05);
+}
+.team .box:hover h3{
+    color: #f25454 !important;
+}
+.team .image-box{
+    opacity: 0;
+    transform: translateY(10px);
+    transition: .3s 0s all linear;
+}
+.team .box:hover .image-box{
+    opacity: .7;
+    transform: translateY(0);
+}
+/* ========== end team ==========*/
+
+/* ========== start client ==========*/
+.blog .carousel-indicators button{
+    text-indent: 0;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    
+}
+.box-silde .slide-image{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+.blog button.active .slide-image{
+    width: 100px;
+    height: 100px;
+}
+.blog button.active .slide-text{
+    display: block !important;
+}
+@media (max-width:992px) {
+    .blog .carousel-item .box{
+        width: 75% !important;
+    }
+}
+@media (max-width:768px) {
+    .blog .carousel-item .box{
+        width: 90% !important;
+    }
+}
+/* ========== end client ==========*/
+
+/* ========== start contact ==========*/
+textarea{
+    height: 120px;
+}
+input:focus,
+textarea:focus{
+    border-color: #f25454 !important;
+}
+/* ========== end contact ==========*/
+
+/* ========== start end ==========*/
+section.end .image{
+    width: 80px;
+}
+.end{
+    background-color: #222;
+    background-image: url(../image/dotted-map.png);
+    background-size: contain;
+}
+.end a{
+    transition: .3s 0s all linear;
+}
+.end a:hover{
+    color: #f25454 !important;
+}
+.end .box:hover{
+    border-color: #f25454 !important;
+}
+/* ========== end end ==========*/
+
+/* ========== start footer ==========*/
+footer a:hover{
+    color: #f25454 !important;
+}
+/* ========== end footer ==========*/
+
